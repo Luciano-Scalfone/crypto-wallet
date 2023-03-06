@@ -1,12 +1,11 @@
 import React from "react";
-import { HeaderWrapper } from "../../components/Header/HeaderStyles";
-import Waves from "../../components/Waves/Waves";
+import Header from "../../components/Header/Header";
 import { HomeWrapper } from "./HomeStyles";
 
 const Home = () => {
   return (
     <HomeWrapper>
-      <HeaderWrapper />
+      <Header />
     </HomeWrapper>
   );
 };
