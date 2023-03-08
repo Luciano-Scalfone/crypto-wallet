@@ -1,0 +1,171 @@
+{
+  "latest": [
+    {
+      "code": "BTC",
+      "name": "Bitcoin",
+      "ask": "1500",
+      "bid": "8582",
+      "var_bid": "7082",
+      "exchange": {
+        "BRL": "23,62",
+        "USD": "24.499,52"
+      }
+    },
+    {
+      "code": "DOG",
+      "name": "Dogecoin",
+      "ask": "2000",
+      "bid": "7230",
+      "var_bid": "-5230",
+      "exchange": {
+        "BRL": "23,62",
+        "USD": "14.499,52"
+      }
+    },
+    {
+      "code": "ETH",
+      "name": "Ethereum",
+      "ask": "2000",
+      "bid": "4500",
+      "var_bid": "2500",
+      "exchange": {
+        "BRL": "23,62",
+        "USD": "20.199,52"
+      }
+    },
+    {
+      "code": "SOL",
+      "name": "Solana",
+      "ask": "1500",
+      "bid": "8582",
+      "var_bid": "7082",
+      "exchange": {
+        "BRL": "23,62",
+        "USD": "24.499,52"
+      }
+    },
+    {
+      "code": "SAND",
+      "name": "SandBox",
+      "ask": "1500",
+      "bid": "8582",
+      "var_bid": "-7082",
+      "exchange": {
+        "BRL": "23,62",
+        "USD": "24.499,52"
+      }
+    }
+  ],
+  "cryptos": [
+    {
+      "code": "BTC",
+      "name": "Bitcoin",
+      "ask": "1500",
+      "bid": "8582",
+      "var_bid": "7082",
+      "exchange": {
+        "BRL": "23,62",
+        "USD": "24.499,52"
+      }
+    },
+    {
+      "code": "DOG",
+      "name": "Dogecoin",
+      "ask": "2000",
+      "bid": "7230",
+      "var_bid": "-5230",
+      "exchange": {
+        "BRL": "23,62",
+        "USD": "14.499,52"
+      }
+    },
+    {
+      "code": "ETH",
+      "name": "Ethereum",
+      "ask": "2000",
+      "bid": "4500",
+      "var_bid": "2500",
+      "exchange": {
+        "BRL": "23,62",
+        "USD": "20.199,52"
+      }
+    },
+    {
+      "code": "SOL",
+      "name": "Solana",
+      "ask": "1500",
+      "bid": "8582",
+      "var_bid": "7082",
+      "exchange": {
+        "BRL": "23,62",
+        "USD": "24.499,52"
+      }
+    },
+    {
+      "code": "SAND",
+      "name": "SandBox",
+      "ask": "1500",
+      "bid": "8582",
+      "var_bid": "-7082",
+      "exchange": {
+        "BRL": "23,62",
+        "USD": "24.499,52"
+      }
+    },
+    {
+      "code": "ADA",
+      "name": "Cardano",
+      "ask": "1500",
+      "bid": "8582",
+      "var_bid": "7082",
+      "exchange": {
+        "BRL": "23,62",
+        "USD": "24.499,52"
+      }
+    },
+    {
+      "code": "USDC",
+      "name": "USD Coin",
+      "ask": "1500",
+      "bid": "8582",
+      "var_bid": "-7082",
+      "exchange": {
+        "BRL": "23,62",
+        "USD": "24.499,52"
+      }
+    },
+    {
+      "code": "POL",
+      "name": "Polygon",
+      "ask": "1500",
+      "bid": "8582",
+      "var_bid": "7082",
+      "exchange": {
+        "BRL": "23,62",
+        "USD": "24.499,52"
+      }
+    },
+    {
+      "code": "SHI",
+      "name": "Shiba Inu",
+      "ask": "1500",
+      "bid": "8582",
+      "var_bid": "-7082",
+      "exchange": {
+        "BRL": "23,62",
+        "USD": "24.499,52"
+      }
+    },
+    {
+      "code": "BNB",
+      "name": "BNB",
+      "ask": "1500",
+      "bid": "8582",
+      "var_bid": "7082",
+      "exchange": {
+        "BRL": "23,62",
+        "USD": "24.499,52"
+      }
+    }
+  ]
+}
