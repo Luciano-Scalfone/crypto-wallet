@@ -2,11 +2,10 @@ import axios from "axios";
 
 const baseUrl = "http://localhost:8080";
 
-export const getAllCurrencies = async () => {
+export const getLatestCryptos = async () => {
   const currencies = await axios
-    .get(baseUrl + "/cryptos")
+    .get(baseUrl + "/latest")
     .then((response) => response.data);
 
-  console.log(currencies);
   return currencies;
 };

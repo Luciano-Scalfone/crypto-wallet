@@ -5,7 +5,7 @@
       "name": "Bitcoin",
       "ask": "1500",
       "bid": "8582",
-      "var_bid": "7082",
+      "var_bid": "+7082",
       "exchange": {
         "BRL": "23,62",
         "USD": "24.499,52"
@@ -27,7 +27,7 @@
       "name": "Ethereum",
       "ask": "2000",
       "bid": "4500",
-      "var_bid": "2500",
+      "var_bid": "+2500",
       "exchange": {
         "BRL": "23,62",
         "USD": "20.199,52"
@@ -38,7 +38,7 @@
       "name": "Solana",
       "ask": "1500",
       "bid": "8582",
-      "var_bid": "7082",
+      "var_bid": "+7082",
       "exchange": {
         "BRL": "23,62",
         "USD": "24.499,52"
@@ -62,7 +62,7 @@
       "name": "Bitcoin",
       "ask": "1500",
       "bid": "8582",
-      "var_bid": "7082",
+      "var_bid": "+7082",
       "exchange": {
         "BRL": "23,62",
         "USD": "24.499,52"
@@ -84,7 +84,7 @@
       "name": "Ethereum",
       "ask": "2000",
       "bid": "4500",
-      "var_bid": "2500",
+      "var_bid": "+2500",
       "exchange": {
         "BRL": "23,62",
         "USD": "20.199,52"
@@ -95,7 +95,7 @@
       "name": "Solana",
       "ask": "1500",
       "bid": "8582",
-      "var_bid": "7082",
+      "var_bid": "+7082",
       "exchange": {
         "BRL": "23,62",
         "USD": "24.499,52"
@@ -117,7 +117,7 @@
       "name": "Cardano",
       "ask": "1500",
       "bid": "8582",
-      "var_bid": "7082",
+      "var_bid": "+7082",
       "exchange": {
         "BRL": "23,62",
         "USD": "24.499,52"
@@ -139,7 +139,7 @@
       "name": "Polygon",
       "ask": "1500",
       "bid": "8582",
-      "var_bid": "7082",
+      "var_bid": "+7082",
       "exchange": {
         "BRL": "23,62",
         "USD": "24.499,52"
@@ -161,7 +161,7 @@
       "name": "BNB",
       "ask": "1500",
       "bid": "8582",
-      "var_bid": "7082",
+      "var_bid": "+7082",
       "exchange": {
         "BRL": "23,62",
         "USD": "24.499,52"
