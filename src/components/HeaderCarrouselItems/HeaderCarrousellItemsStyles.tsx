@@ -10,7 +10,7 @@ export const HeaderCarrouselItemsWrapper = styled.div.attrs({
   width: 120px;
 
   & span {
-    font: ${() => FONTS.SMALL_LABEL};
+    font: ${() => FONTS.regular.small_label};
     color: ${() => COLORS.SECONDARY800};
   }
 

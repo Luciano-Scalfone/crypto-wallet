@@ -1,14 +1,26 @@
 const FONTS = {
-    H1: '48px/56px Roboto',
-    H2: '40px/48px Roboto',
-    H3: '32px/40px Roboto',
-    H4: '24px/32px Roboto',
-    H5: '20px/24px Roboto',
-    BODY_TEXT: 'bold 16px/24px Roboto',
-    LABEL: 'bold 14px/16px Roboto',
-    SMALL_LABEL: 'bold 12px/14px Roboto',
-    PARAGRAPH_REGULAR: '14px/24px Roboto',
-    PARAGRAPH_BOLD: 'bold 14px/24px Roboto',
+  regular: {
+    h1: "normal normal 400 48px/56px Roboto",
+    h2: "normal normal 400 40px/48px Roboto",
+    h3: "normal normal 400 32px/40px Roboto",
+    h4: "normal normal 400 24px/32px Roboto",
+    h5: "normal normal 400 20px/32px Roboto",
+    body: "normal normal 400 16px/24px Roboto",
+    label: "normal normal 400 14px/16px Roboto",
+    small_label: "normal normal 400 12px/14px Roboto",
+    label_paragraph: "normal normal 400 14px/24px Roboto",
+  },
+  bold: {
+    h1: "normal normal 700 48px/56px Roboto",
+    h2: "normal normal 700 40px/48px Roboto",
+    h3: "normal normal 700 32px/40px Roboto",
+    h4: "normal normal 700 24px/32px Roboto",
+    h5: "normal normal 700 20px/32px Roboto",
+    body: "normal normal 700 16px/24px Roboto",
+    label: "normal normal 700 14px/16px Roboto",
+    small_label: "normal normal 700 12px/14px Roboto",
+    label_paragraph: "normal normal 700 14px/24px Roboto",
+  },
 };
 
 export default FONTS;
