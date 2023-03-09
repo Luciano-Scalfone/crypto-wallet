@@ -13,3 +13,11 @@ export interface ButtonTypes {
     height?: string;
   };
 }
+
+export interface CardItemTypes {
+  icon: JSX.Element;
+  label: string;
+  title: string;
+  content: string;
+  index: number;
+}
