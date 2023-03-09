@@ -30,4 +30,18 @@ describe("Header Component", () => {
   
     expect(headerWrapper).toHaveLength(2);
   });
+
+  
+  it("Should have an icon component with id 'coin-synch-logo'", () => {
+    const coinSynch = headerComponent.querySelector('#coin-synch-logo');
+  
+    expect(coinSynch).toBeInTheDocument();
+  });
+
+  
+  it("Should have an icon component with id 'hamburger-menu'", () => {
+    const hamburgerMenu = headerComponent.querySelector('#hamburger-menu');
+  
+    expect(hamburgerMenu).toBeInTheDocument();
+  });
 });

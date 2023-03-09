@@ -4,6 +4,7 @@ import { SVGIconsSize } from "../../../interfaces/IconsTypes";
 const CoinSynch = ({width, height}: SVGIconsSize): JSX.Element => {
   return (
     <svg
+      id="coin-synch-logo"
       width={width}
       height={height}
       viewBox="0 0 124 21"

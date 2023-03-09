@@ -4,6 +4,7 @@ import { SVGIconsSize } from "../../../interfaces/IconsTypes";
 const HamburgerMenu = ({ width, height }: SVGIconsSize): JSX.Element => {
   return (
     <svg
+      id="hamburger-menu"
       width={width}
       height={height}
       viewBox="0 0 24 24"
