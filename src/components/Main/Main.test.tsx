@@ -19,31 +19,15 @@ describe("Main Component", () => {
     expect(mainWrapper).toBeInTheDocument();
   });
 
-  it("Should have a h5 component", () => {
-    const mainTitleComponent = mainComponent.querySelector('h5');
+  it("Should have a component with className 'main-top-wrapper'", () => {
+    const mainTopWrapper = mainComponent.querySelector('.main-top-wrapper');
 
-    expect(mainTitleComponent).toBeInTheDocument();
+    expect(mainTopWrapper).toBeInTheDocument();
   });
 
-  it("Should have a paragraph component", () => {
-    const mainParagraph = mainComponent.querySelector('p');
+  it("Should have a component with className 'main-middle-wrapper'", () => {
+    const mainMiddleWrapper = mainComponent.querySelector('.main-middle-wrapper');
 
-    expect(mainParagraph).toBeInTheDocument();
-  });
-
-  it("Should have an element with className 'button-wrapper__modifier__primary'", () => {
-    const buttonPrimary = mainComponent.querySelector(
-      ".button-wrapper__modifier__primary"
-    );
-
-    expect(buttonPrimary).toBeInTheDocument();
-  });
-
-  it("Should have three elements with className 'button-wrapper__modifier__secondary'", () => {
-    const buttonSecondary = mainComponent.querySelectorAll(
-      ".button-wrapper__modifier__secondary"
-    );
-
-    expect(buttonSecondary).toHaveLength(3);
+    expect(mainMiddleWrapper).toBeInTheDocument();
   });
 });
