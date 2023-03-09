@@ -13,9 +13,21 @@ describe("Main Component", () => {
     expect(mainComponent).toBeDefined();
   });
 
-  it("Should hace a component with className 'main-wrapper'", () => {
+  it("Should have a component with className 'main-wrapper'", () => {
     const mainWrapper = mainComponent.querySelector('.main-wrapper');
 
     expect(mainWrapper).toBeInTheDocument();
+  });
+
+  it("Should have a h5 component", () => {
+    const mainTitleComponent = mainComponent.querySelector('h5');
+
+    expect(mainTitleComponent).toBeInTheDocument();
+  });
+
+  it("Should have a paragraph component", () => {
+    const mainParagraph = mainComponent.querySelector('p');
+
+    expect(mainParagraph).toBeInTheDocument();
   });
 });
