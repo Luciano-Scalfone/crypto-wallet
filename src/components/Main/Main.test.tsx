@@ -30,4 +30,20 @@ describe("Main Component", () => {
 
     expect(mainParagraph).toBeInTheDocument();
   });
+
+  it("Should have an element with className 'button-wrapper__modifier__primary'", () => {
+    const buttonPrimary = mainComponent.querySelector(
+      ".button-wrapper__modifier__primary"
+    );
+
+    expect(buttonPrimary).toBeInTheDocument();
+  });
+
+  it("Should have three elements with className 'button-wrapper__modifier__secondary'", () => {
+    const buttonSecondary = mainComponent.querySelectorAll(
+      ".button-wrapper__modifier__secondary"
+    );
+
+    expect(buttonSecondary).toHaveLength(3);
+  });
 });

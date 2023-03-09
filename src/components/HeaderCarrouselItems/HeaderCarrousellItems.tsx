@@ -1,5 +1,5 @@
 import React from "react";
-import { HeaderCarrouselItemsTypes } from "../../interfaces/HeaderTypes";
+import { HeaderCarrouselItemsTypes } from "../../interfaces/ComponentPropsTypes";
 import { HeaderCarrouselItemsWrapper } from "./HeaderCarrousellItemsStyles";
 
 const HeaderCarrouselItems = ({

@@ -5,3 +5,10 @@ export interface HeaderCoinCarroucelType {
 export interface HeaderCarroucelItemsType {
   varBid: number;
 };
+
+export interface ButtonWrapperType {
+  buttonSize?: {
+    width?: string;
+    height?: string;
+  };
+};
