@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import CardItem from "../CardItem/CardItem";
 import Bitcoin from "../icons/Bitcoin/Bitcoin";
 import Business from "../icons/Business/Business";
@@ -46,17 +47,19 @@ const MainMiddle = (): JSX.Element => {
         purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor
       </p>
       <div className="main-middle-wrapper__cards-wrapper">
-        {CARDS_CONTENT.map((content, index) => {
-          return (
-            <CardItem
-              icon={content.iconElement}
-              label={content.label}
-              title={content.title}
-              content={content.content}
-              index={index}
-            />
-          );
-        })}
+        <div className="main-middle-wrapper__slider">
+          {CARDS_CONTENT.map((content, index) => {
+            return (
+              <CardItem
+                icon={content.iconElement}
+                label={content.label}
+                title={content.title}
+                content={content.content}
+                index={index}
+              />
+            );
+          })}
+        </div>
       </div>
     </MainMiddleWrapper>
   );

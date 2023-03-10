@@ -31,19 +31,32 @@ const MainMiddleWrapper = styled.section.attrs({
 
   & .main-middle-wrapper__cards-wrapper {
     width: 100vw;
+    margin: 0 -24px;
+    box-sizing: border-box;
+  }
+
+  & .main-middle-wrapper__slider {
     display: flex;
     flex-wrap: nowrap;
     gap: 16px;
-    overflow: hidden;
+    overflow-x: scroll;
 
     background: linear-gradient(
       180deg,
       rgba(255, 255, 255, 0) 0%,
       #f7f7f7 100%
     );
-    margin: 0 -24px;
     padding: 11px 24px 56px 24px;
     box-sizing: border-box;
+
+    // the code below hides the scroll for Edge and firefox
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  // the code below hides the scroll for chrome, opera and safary
+  & .main-middle-wrapper__slider::-webkit-scrollbar {
+    display: none;
   }
 `;
 
