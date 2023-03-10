@@ -7,7 +7,7 @@ const MainWrapper = styled.main.attrs({ className: "main-wrapper" })`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 56px 24px;
+  padding: 56px 24px 0 24px;
   gap: 56px;
 `;
 

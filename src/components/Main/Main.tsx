@@ -1,3 +1,4 @@
+import MainBottom from "../MainBottom/MainBottom";
 import MainMiddle from "../MainMiddle/MainMiddle";
 import MainTop from "../MainTop/MainTop";
 import MainWrapper from "./MainStyles";
@@ -7,6 +8,7 @@ const Main = (): JSX.Element => {
     <MainWrapper>
       <MainTop />
       <MainMiddle />
+      <MainBottom />
     </MainWrapper>
   );
 };
