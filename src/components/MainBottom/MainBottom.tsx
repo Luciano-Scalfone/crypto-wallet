@@ -1,7 +1,29 @@
+import { useState } from "react";
 import Button from "../Button/Button";
 import MainBottomWrapper from "./MainBottomStyles";
+import { DebounceInput } from "react-debounce-input";
+import { addNewSubscription } from "../../service/fetchData";
 
 const MainBottom = (): JSX.Element => {
+  const [email, setEmail] = useState("");
+  const [isDisabled, setIsDisabled] = useState(false);
+
+  const handleChange = ({ target }: any) => {
+    setEmail(target.value);
+  };
+
+  const handleSubscribeCLick = () => {
+    if (email.length) {
+      setIsDisabled(true);
+      setTimeout(async () => {
+        await addNewSubscription(email);
+  
+        setEmail("");
+        setIsDisabled(false);
+      }, 1500);
+    }
+  };
+
   return (
     <MainBottomWrapper>
       <span className="main-bottom-wrapper__span">Lorem ipsum</span>
@@ -12,9 +34,22 @@ const MainBottom = (): JSX.Element => {
       </p>
       <label className="main-bottom-wrapper__input-label">
         Email
-        <input className="main-bottom-wrapper__input" />
+        <DebounceInput
+          disabled={isDisabled}
+          type="email"
+          debounceTimeout={1500}
+          className="main-bottom-wrapper__input"
+          onChange={handleChange}
+          value={email}
+        />
       </label>
-      <Button type="primary" content="Subscribe" callback={() => console.log('subscribe')} size={{width: '100%', height: '40px'}}/>
+      <Button
+        disabled={isDisabled}
+        type="primary"
+        content="Subscribe"
+        callback={handleSubscribeCLick}
+        size={{ width: "100%", height: "40px" }}
+      />
     </MainBottomWrapper>
   );
 };

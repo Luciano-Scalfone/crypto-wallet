@@ -7,6 +7,8 @@ export const ButtonWrapper = styled.button.attrs({
   className: "button-wrapper",
 })<ButtonWrapperType>`
   all: unset;
+  display: flex;
+  gap: 8px;
 
   & .button-wrapper__modifier__primary {
     display: flex;
@@ -39,5 +41,10 @@ export const ButtonWrapper = styled.button.attrs({
     font: ${() => FONTS.regular.small_label};
     color: ${() => COLORS.PRIMARY500};
     text-align: center;
+  }
+
+  &:disabled .button-wrapper__modifier__primary,
+  .button-wrapper__modifier__secondary {
+    opacity: 0.5;
   }
 `;

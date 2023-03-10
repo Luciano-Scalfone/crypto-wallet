@@ -1,4 +1,5 @@
 import Button from "../Button/Button";
+import RightArow from "../icons/RightArow/RightArow";
 import Waves from "../icons/Waves/Waves";
 import MainTopWrapper from "./MainTopStyles";
 
@@ -16,6 +17,7 @@ const MainTop = (): JSX.Element => {
         type="primary"
         content="SIGN UP NOW"
         callback={() => console.log("test")}
+        icon={<RightArow width={15} height={15} />}
       />
       <div className="main-top-wrapper__buttons-set">
         <Button

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { getLatestCryptos } from "../../service/getCurrencies";
+import { getLatestCryptos } from "../../service/fetchData";
 import HeaderCoinCarrousel from "../HeaderCoinCarrousel/HeaderCoinCarrousel";
 import CoinSynch from "../icons/CoinSynch/CoinSynch";
 import HamburgerMenu from "../icons/HamburgerMenu/HamburgerMenu";

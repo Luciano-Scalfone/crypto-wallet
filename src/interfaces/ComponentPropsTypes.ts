@@ -12,6 +12,8 @@ export interface ButtonTypes {
     width?: string;
     height?: string;
   };
+  disabled?: boolean;
+  icon?: JSX.Element;
 }
 
 export interface CardItemTypes {

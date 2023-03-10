@@ -1,10 +1,20 @@
 import { ButtonTypes } from "../../interfaces/ComponentPropsTypes";
 import { ButtonWrapper } from "./ButtonStyles";
 
-const Button = ({ type, content, callback, size }: ButtonTypes): JSX.Element => {
+const Button = ({
+  type,
+  content,
+  callback,
+  size,
+  disabled,
+  icon
+}: ButtonTypes): JSX.Element => {
   return (
-    <ButtonWrapper onClick={callback} buttonSize={size} >
-      <div className={`button-wrapper__modifier__${type}`}>{content}</div>
+    <ButtonWrapper onClick={callback} buttonSize={size} disabled={disabled}>
+      <div className={`button-wrapper__modifier__${type}`}>
+        {content}
+        {icon}
+      </div>
     </ButtonWrapper>
   );
 };

@@ -167,5 +167,67 @@
         "USD": "24.499,52"
       }
     }
+  ],
+  "subscription-list": [
+    {
+      "luciano.scalfone@gmail.com": "",
+      "id": 1
+    },
+    {
+      "email": "luciano.scalfone@gmail.com",
+      "id": 2
+    },
+    {
+      "email": "Luciano.scalfone",
+      "id": 3
+    },
+    {
+      "email": "teste.test",
+      "id": 4
+    },
+    {
+      "email": "",
+      "id": 5
+    },
+    {
+      "email": "teste",
+      "id": 6
+    },
+    {
+      "email": "test",
+      "id": 7
+    },
+    {
+      "email": "xablau",
+      "id": 8
+    },
+    {
+      "email": "test",
+      "id": 9
+    },
+    {
+      "email": "test",
+      "id": 10
+    },
+    {
+      "email": "test",
+      "id": 11
+    },
+    {
+      "email": "test",
+      "id": 12
+    },
+    {
+      "email": "test",
+      "id": 13
+    },
+    {
+      "email": "",
+      "id": 14
+    },
+    {
+      "email": "",
+      "id": 15
+    }
   ]
 }
