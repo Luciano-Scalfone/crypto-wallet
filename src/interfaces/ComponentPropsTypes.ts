@@ -5,7 +5,7 @@ export interface HeaderCarrouselItemsTypes {
 }
 
 export interface ButtonTypes {
-  type: "primary" | "secondary";
+  type: "primary" | "secondary" | 'text-only';
   content: string;
   callback: () => any;
   size?: {

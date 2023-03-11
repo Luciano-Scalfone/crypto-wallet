@@ -46,6 +46,16 @@ export const TopCryptosWrapper = styled.section.attrs({
     font: ${() => FONTS.regular.label};
     padding: 0 24px 8px 24px;
   }
+
+  & .top-cryptos-wrapper__view-more-wrapper {
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+  }
 `;
 
 export const FakeTableBodyCellWrapper = styled.div.attrs({

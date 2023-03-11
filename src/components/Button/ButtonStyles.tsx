@@ -47,4 +47,21 @@ export const ButtonWrapper = styled.button.attrs({
   .button-wrapper__modifier__secondary {
     opacity: 0.5;
   }
+
+  & .button-wrapper__modifier__text-only {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 16px;
+    gap: 8px;
+    box-sizing: border-box;
+
+    width: ${(props) => props?.buttonSize?.width || "180px"};
+    height: ${(props) => props?.buttonSize?.height || "32px"};
+
+    font: ${() => FONTS.regular.body};
+    color: ${() => COLORS.PRIMARY500};
+    
+    text-align: center;
+  }
 `;
