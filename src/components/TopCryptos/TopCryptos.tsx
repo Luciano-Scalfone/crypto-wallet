@@ -15,10 +15,25 @@ const TopCryptos = (): JSX.Element => {
     const targetClasses = event?.currentTarget?.classList;
     const svgClass = "top-cryptos-wrapper__body-svg-element";
 
-    [...targetClasses].includes(svgClass)
-      ? targetClasses.remove(svgClass)
-      : targetClasses.add(svgClass);
+    classHandlerHelper(targetClasses, svgClass)
   };
+
+  const handleViewMoreButtonClick = () => {
+    const viewMoreWrapper: any = document.querySelector(
+      ".top-cryptos-wrapper__view-more-wrapper"
+    )?.classList;
+    const className = "top-cryptos-wrapper__view-more-wrapper__view-toggle";
+
+    classHandlerHelper(viewMoreWrapper, className);
+
+    setShowMore(!showMore);
+  };
+
+  const classHandlerHelper = (domToken: DOMTokenList, className: string) => {
+    Array.from(domToken).includes(className)
+      ? domToken?.remove(className)
+      : domToken?.add(className);
+  }
 
   useEffect(() => {
     const fakeTableConfig = data.map(
@@ -76,12 +91,12 @@ const TopCryptos = (): JSX.Element => {
               );
             })}
         </div>
-        <Button
-          type="text-only"
-          content={showMore ? "View more +" : "View less -"}
-          callback={() => setShowMore(!showMore)}
-        />
       </div>
+      <Button
+        type="text-only"
+        content={showMore ? "View more +" : "View less -"}
+        callback={handleViewMoreButtonClick}
+      />
     </TopCryptosWrapper>
   );
 };

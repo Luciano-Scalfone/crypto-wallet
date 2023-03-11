@@ -27,4 +27,12 @@ describe("TopCryptos component", () => {
 
     expect(topCryptosTitle).toBeInTheDocument();
   });
+
+  it("Should have three elements with className 'button-wrapper__modifier__text-only'", () => {
+    const buttonComponent = topCryptosComponent.querySelector(
+      ".button-wrapper__modifier__text-only"
+    );
+
+    expect(buttonComponent).toBeInTheDocument();
+  });
 });

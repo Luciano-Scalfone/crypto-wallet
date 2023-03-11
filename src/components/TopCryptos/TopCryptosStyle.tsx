@@ -56,6 +56,11 @@ export const TopCryptosWrapper = styled.section.attrs({
     align-items: center;
     gap: 16px;
   }
+
+  & .top-cryptos-wrapper__view-more-wrapper__view-toggle {
+    overflow: hidden;
+    height: 184px;
+  }
 `;
 
 export const FakeTableBodyCellWrapper = styled.div.attrs({
