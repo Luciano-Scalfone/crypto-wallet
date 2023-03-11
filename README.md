@@ -1,70 +1,44 @@
-# Getting Started with Create React App
+# Welcome to Crypto Synch
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is a crypto coin platform prototype. At its home page is possible to see information about the platform and at dashboard page, it behaves like a crypto wallet (still in progress).
+
+This is a mobie first project. So try to run it in different devices (still in progress*).
+
+\* Currently this project is a mobile only project. If you open it at desktop devices its possible to see all the data but the user experience won't be too smoothy. 
 
 ## Available Scripts
 
-In the project directory, you can run:
+To install the dependencies run:
+
+### `npm install`
+
+To set up the front-end. In the project directory, you can run:
 
 ### `npm start`
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+This project uses json-server to run a fake API, that simulate backend-integration. 
+To set up the fake API. In the project directory, you can run:
+
+### `npm run fake-api`
+
+OBS.: json-server will setup a server at port 8080, make sure this port its not being used. Or run the json-server script in another port with:
+
+### `npx json-server --watch db.json -p <NEW_PORT>`
 
 ### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Launches the test runner in the interactive watch mode.
 
-### `npm run build`
+## For The Interviewrs
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Hello, folks.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+For this project I gave my best to follow the best development practives and to deliver a horizontal slice of the project fully independent. Given the time and the hands involved in this project (just my hands haha) I had to take some decisions in order to deliver what I judged would be the best way to let you know my development skills.
+That said, I tried to develop everything on my own, and avoided the usage of external libraries. I also followed the TDD process, and Typescrips instead of Javascript, what in my point of view, is what I see companies using the most for business projects. This whole context decreased my development speed, once TS is more verbose and TDD itselve reduce the development speed. Besides that, I tried to not sacrifice processes and code quality in order to deliver faster.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Thank you to the oportunity and time you dedicated for this process. Be aware that I enjoyed a lot to work in this project.
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+I look foward to hearing from you.
