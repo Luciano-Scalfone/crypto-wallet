@@ -58,6 +58,7 @@
   ],
   "cryptos": [
     {
+      "id": "01",
       "code": "BTC",
       "name": "Bitcoin",
       "ask": "1500",
@@ -69,17 +70,7 @@
       }
     },
     {
-      "code": "DOG",
-      "name": "Dogecoin",
-      "ask": "2000",
-      "bid": "7230",
-      "var_bid": "-5230",
-      "exchange": {
-        "BRL": "23,62",
-        "USD": "14.499,52"
-      }
-    },
-    {
+      "id": "02",
       "code": "ETH",
       "name": "Ethereum",
       "ask": "2000",
@@ -91,28 +82,7 @@
       }
     },
     {
-      "code": "SOL",
-      "name": "Solana",
-      "ask": "1500",
-      "bid": "8582",
-      "var_bid": "+7082",
-      "exchange": {
-        "BRL": "23,62",
-        "USD": "24.499,52"
-      }
-    },
-    {
-      "code": "SAND",
-      "name": "SandBox",
-      "ask": "1500",
-      "bid": "8582",
-      "var_bid": "-7082",
-      "exchange": {
-        "BRL": "23,62",
-        "USD": "24.499,52"
-      }
-    },
-    {
+      "id": "03",
       "code": "ADA",
       "name": "Cardano",
       "ask": "1500",
@@ -124,6 +94,19 @@
       }
     },
     {
+      "id": "04",
+      "code": "SOL",
+      "name": "Solana",
+      "ask": "1500",
+      "bid": "8582",
+      "var_bid": "+7082",
+      "exchange": {
+        "BRL": "23,62",
+        "USD": "24.499,52"
+      }
+    },
+    {
+      "id": "05",
       "code": "USDC",
       "name": "USD Coin",
       "ask": "1500",
@@ -135,8 +118,9 @@
       }
     },
     {
-      "code": "POL",
-      "name": "Polygon",
+      "id": "06",
+      "code": "BTC",
+      "name": "Bitcoin",
       "ask": "1500",
       "bid": "8582",
       "var_bid": "+7082",
@@ -146,8 +130,45 @@
       }
     },
     {
-      "code": "SHI",
-      "name": "Shiba Inu",
+      "id": "07",
+      "code": "ETH",
+      "name": "Ethereum",
+      "ask": "2000",
+      "bid": "4500",
+      "var_bid": "+2500",
+      "exchange": {
+        "BRL": "23,62",
+        "USD": "20.199,52"
+      }
+    },
+    {
+      "id": "08",
+      "code": "ADA",
+      "name": "Cardano",
+      "ask": "1500",
+      "bid": "8582",
+      "var_bid": "+7082",
+      "exchange": {
+        "BRL": "23,62",
+        "USD": "24.499,52"
+      }
+    },
+    {
+      "id": "09",
+      "code": "SOL",
+      "name": "Solana",
+      "ask": "1500",
+      "bid": "8582",
+      "var_bid": "+7082",
+      "exchange": {
+        "BRL": "23,62",
+        "USD": "24.499,52"
+      }
+    },
+    {
+      "id": "10",
+      "code": "USDC",
+      "name": "USD Coin",
       "ask": "1500",
       "bid": "8582",
       "var_bid": "-7082",
@@ -155,79 +176,7 @@
         "BRL": "23,62",
         "USD": "24.499,52"
       }
-    },
-    {
-      "code": "BNB",
-      "name": "BNB",
-      "ask": "1500",
-      "bid": "8582",
-      "var_bid": "+7082",
-      "exchange": {
-        "BRL": "23,62",
-        "USD": "24.499,52"
-      }
     }
   ],
-  "subscription-list": [
-    {
-      "luciano.scalfone@gmail.com": "",
-      "id": 1
-    },
-    {
-      "email": "luciano.scalfone@gmail.com",
-      "id": 2
-    },
-    {
-      "email": "Luciano.scalfone",
-      "id": 3
-    },
-    {
-      "email": "teste.test",
-      "id": 4
-    },
-    {
-      "email": "",
-      "id": 5
-    },
-    {
-      "email": "teste",
-      "id": 6
-    },
-    {
-      "email": "test",
-      "id": 7
-    },
-    {
-      "email": "xablau",
-      "id": 8
-    },
-    {
-      "email": "test",
-      "id": 9
-    },
-    {
-      "email": "test",
-      "id": 10
-    },
-    {
-      "email": "test",
-      "id": 11
-    },
-    {
-      "email": "test",
-      "id": 12
-    },
-    {
-      "email": "test",
-      "id": 13
-    },
-    {
-      "email": "",
-      "id": 14
-    },
-    {
-      "email": "",
-      "id": 15
-    }
-  ]
+  "subscription-list": []
 }

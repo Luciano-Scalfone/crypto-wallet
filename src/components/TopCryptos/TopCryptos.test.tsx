@@ -19,4 +19,12 @@ describe("TopCryptos component", () => {
 
     expect(topCryptosWrapper).toBeInTheDocument();
   });
+
+  it("Should have an element with className 'top-cryptos-wrapper__title'", () => {
+    const topCryptosTitle = topCryptosComponent.querySelector(
+      ".top-cryptos-wrapper__title"
+    );
+
+    expect(topCryptosTitle).toBeInTheDocument();
+  });
 });
