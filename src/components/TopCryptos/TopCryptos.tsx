@@ -23,6 +23,7 @@ const TopCryptos = (): JSX.Element => {
       ({ id, name, code, exchange, var_bid }: any) => {
         return {
           id,
+          name,
           crypto: `${name} ${code}`,
           price: exchange.USD,
           change: var_bid,
@@ -60,6 +61,7 @@ const TopCryptos = (): JSX.Element => {
 
                   return (
                     <FakeTableBodyCellWrapper>
+                      <img src={require(`../../assets/${crypto.name}.png`)} width="24px" />
                       {crypto[element]}
                     </FakeTableBodyCellWrapper>
                   );

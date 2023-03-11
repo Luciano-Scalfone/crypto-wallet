@@ -55,6 +55,8 @@ export const FakeTableBodyCellWrapper = styled.div.attrs({
   font: ${() => FONTS.regular.body};
   white-space: nowrap;
   padding: 8px 24px;
+  display: flex;
+  gap: 8px;
 
   &:nth-child(odd) {
     background-color: ${() => COLORS.SECONDARY100};
