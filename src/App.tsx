@@ -1,12 +1,12 @@
 import './App.css';
-import CoinProvider from './contexts/CoinContext';
+import ModalsProvider from './contexts/ModalsContext';
 import Router from './Router';
 
 function App() {
   return (
-    <CoinProvider>
+    <ModalsProvider>
       <Router />
-    </CoinProvider>
+    </ModalsProvider>
   );
 }
 

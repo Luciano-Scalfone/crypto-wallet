@@ -1,12 +1,12 @@
 import { render } from "@testing-library/react";
-import React from "react";
+import ModalsProvider from "../../contexts/ModalsContext";
 import Home from "./Home";
 
 describe("Home Component", () => {
   let homeComponent: HTMLElement;
 
   beforeEach(() => {
-    homeComponent = render(<Home />).container;
+    homeComponent = render(<ModalsProvider><Home /></ModalsProvider>).container;
   });
 
   it("Should exists", () => {

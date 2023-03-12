@@ -1,9 +1,13 @@
+import { useContext } from "react";
+import { ModalsContext } from "../../contexts/ModalsContext";
 import Button from "../Button/Button";
 import RightArow from "../icons/RightArow/RightArow";
 import Waves from "../icons/Waves/Waves";
 import MainTopWrapper from "./MainTopStyles";
 
 const MainTop = (): JSX.Element => {
+  const { setShowSignIn } = useContext(ModalsContext);
+
   return (
     <MainTopWrapper>
       <h5 className="main-top-wrapper__title">
@@ -16,7 +20,7 @@ const MainTop = (): JSX.Element => {
       <Button
         type="primary"
         content="SIGN UP NOW"
-        callback={() => console.log("test")}
+        callback={() => setShowSignIn(true)}
         icon={<RightArow width={15} height={15} />}
       />
       <div className="main-top-wrapper__buttons-set">
