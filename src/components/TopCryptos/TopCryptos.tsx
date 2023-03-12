@@ -9,13 +9,13 @@ const FAKE_TABLE_HEADER = ["crypto", "actions"];
 const TopCryptos = (): JSX.Element => {
   const [data] = useFetch("/cryptos");
   const [mappedData, setMappedData] = useState<any[]>([]);
-  const [showMore, setShowMore] = useState(false);
+  const [showMore, setShowMore] = useState(true);
 
   const handleFakeTableArowClick = (event: any) => {
     const targetClasses = event?.currentTarget?.classList;
     const svgClass = "top-cryptos-wrapper__body-svg-element";
 
-    classHandlerHelper(targetClasses, svgClass)
+    classHandlerHelper(targetClasses, svgClass);
   };
 
   const handleViewMoreButtonClick = () => {
@@ -33,7 +33,7 @@ const TopCryptos = (): JSX.Element => {
     Array.from(domToken).includes(className)
       ? domToken?.remove(className)
       : domToken?.add(className);
-  }
+  };
 
   useEffect(() => {
     const fakeTableConfig = data.map(
@@ -54,7 +54,7 @@ const TopCryptos = (): JSX.Element => {
   return (
     <TopCryptosWrapper>
       <h5 className="top-cryptos-wrapper__title">Top Cryptos</h5>
-      <div className="top-cryptos-wrapper__view-more-wrapper">
+      <div className="top-cryptos-wrapper__view-more-wrapper  top-cryptos-wrapper__view-more-wrapper__view-toggle">
         <div className="top-cryptos-wrapper__table-wrapper">
           {data &&
             FAKE_TABLE_HEADER.map((element, index) => {
@@ -94,7 +94,7 @@ const TopCryptos = (): JSX.Element => {
       </div>
       <Button
         type="text-only"
-        content={showMore ? "View more +" : "View less -"}
+        content={showMore ? "View more +" : "View less"}
         callback={handleViewMoreButtonClick}
       />
     </TopCryptosWrapper>
