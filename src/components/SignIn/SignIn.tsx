@@ -21,6 +21,10 @@ const SignIn = (): JSX.Element => {
   const [seePassword, setSeePassword] = useState(false);
   const [user, setUser] = useState({ email: "", password: "" });
 
+  const handleForgotPassword = () => {
+    return alert('A new link to change your password was sent to your email!');
+  }
+
   return (
     <>
       <SignInHeaderWrapper>
@@ -54,7 +58,7 @@ const SignIn = (): JSX.Element => {
           ),
         }}
       />
-      <SignInForgotPasswordWrapper>
+      <SignInForgotPasswordWrapper onClick={handleForgotPassword}>
         Forgot password?
       </SignInForgotPasswordWrapper>
       <SignInButtonWrapper>
