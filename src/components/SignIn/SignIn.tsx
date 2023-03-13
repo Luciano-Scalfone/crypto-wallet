@@ -9,7 +9,6 @@ import Lock from "../icons/Lock/Lock";
 import LogoName from "../icons/LogoName/LogoName";
 import Input from "../Input/Input";
 import { SignInWrapper } from "./SignInStyles";
-import EmailInput from "../Input/Input";
 
 const SignIn = (): JSX.Element => {
   const { setShowSignIn } = useContext(ModalsContext);
@@ -34,13 +33,13 @@ const SignIn = (): JSX.Element => {
         <Input
           type="email"
           placeholder="Email"
-          callback={() => console.log(true)}
+          callback={setUser}
           icons={{ left: <Envelope width="16px" /> }}
         />
         <Input
           type={seePassword ? "text" : "password"}
           placeholder="Password"
-          callback={() => console.log(true)}
+          callback={setUser}
           icons={{
             left: <Lock width="16px" />,
             right: (
@@ -58,6 +57,7 @@ const SignIn = (): JSX.Element => {
           content="Sign in"
           callback={() => console.log("signed in")}
           size={{ width: "100%", height: "48px" }}
+          disabled={!!(!user.email.length || !user.password.length)}
         />
         <div className="sign-in-wrapper__sign-up-wrapper">
           <span className="sign-in-wrapper__modal-sign-up-link">

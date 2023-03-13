@@ -1,3 +1,5 @@
+import { SetStateAction } from "react";
+
 export interface HeaderCarrouselItemsTypes {
   code: string;
   varBid: number;
@@ -27,9 +29,9 @@ export interface CardItemTypes {
 export interface InputTypes {
   type: string;
   placeholder: string;
-  callback?: () => any;
+  callback?: SetStateAction<any>;
   icons?: {
     left?: JSX.Element;
     right?: JSX.Element;
-  }
+  },
 }

@@ -2,10 +2,11 @@ import { render } from "@testing-library/react";
 import Input from "./Input";
 
 const MOCK_PROPS = {
-  type: 'mock-props',
+  type: 'text',
   placeholder: "mock-props",
   callback: () => true,
   icons: { left: <></>, right: <></> },
+  state: 'mock-props',
 };
 
 describe("SignIn Component", () => {
