@@ -23,3 +23,13 @@ export interface CardItemTypes {
   content: string;
   index: number;
 }
+
+export interface InputTypes {
+  type: string;
+  placeholder: string;
+  callback?: () => any;
+  icons?: {
+    left?: JSX.Element;
+    right?: JSX.Element;
+  }
+}

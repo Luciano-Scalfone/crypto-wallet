@@ -7,11 +7,14 @@ import Eye from "../icons/Eye/Eye";
 import EyeSlash from "../icons/EyeSlash/EyeSlash";
 import Lock from "../icons/Lock/Lock";
 import LogoName from "../icons/LogoName/LogoName";
+import Input from "../Input/Input";
 import { SignInWrapper } from "./SignInStyles";
+import EmailInput from "../Input/Input";
 
 const SignIn = (): JSX.Element => {
   const { setShowSignIn } = useContext(ModalsContext);
   const [seePassword, setSeePassword] = useState(false);
+  const [user, setUser] = useState({ email: "", password: "" });
 
   return (
     <SignInWrapper>
@@ -28,25 +31,25 @@ const SignIn = (): JSX.Element => {
             <LogoName width="auto" height="16px" />
           </div>
         </div>
-        <section className="sign-in-wrapper__modal-email-input">
-          <Envelope width="16px" />
-          <input
-            type="email"
-            placeholder="Email"
-            className="sign-in-wrapper__modal-input-area"
-          />
-        </section>
-        <section className="sign-in-wrapper__modal-password-input">
-          <Lock width="16px" />
-          <input
-            type={seePassword ? "text" : "password"}
-            placeholder="Password"
-            className="sign-in-wrapper__modal-input-area"
-          />
-          <div onClick={() => setSeePassword(!seePassword)}>
-            {seePassword ? <EyeSlash width="16px" /> : <Eye width="16px" />}
-          </div>
-        </section>
+        <Input
+          type="email"
+          placeholder="Email"
+          callback={() => console.log(true)}
+          icons={{ left: <Envelope width="16px" /> }}
+        />
+        <Input
+          type={seePassword ? "text" : "password"}
+          placeholder="Password"
+          callback={() => console.log(true)}
+          icons={{
+            left: <Lock width="16px" />,
+            right: (
+              <div onClick={() => setSeePassword(!seePassword)}>
+                {seePassword ? <EyeSlash width="16px" /> : <Eye width="16px" />}
+              </div>
+            ),
+          }}
+        />
         <span className="sign-in-wrapper__modal-forgot-password">
           Forgot password?
         </span>

@@ -55,37 +55,7 @@ export const SignInWrapper = styled.div.attrs({ className: "sign-in-wrapper" })`
     margin: 0;
   }
 
-  & .sign-in-wrapper__modal-email-input,
-  .sign-in-wrapper__modal-password-input {
-    display: flex;
-    gap: 8px;
-    background: #ffffff;
-    mix-blend-mode: normal;
-    border: 1px solid ${COLORS.SECONDARY300};
-    border-radius: 6px;
-    width: 100%;
-    height: 48px;
-    padding: 16px;
-    box-sizing: border-box;
-  }
-
-  & .sign-in-wrapper__modal-email-input svg path,
-  .sign-in-wrapper__modal-password-input svg path {
-    fill: #323232;
-  }
-
-  & .sign-in-wrapper__modal-input-area {
-    background-color: transparent;
-    box-sizing: border-box;
-    border: none;
-    width: 100%;
-    height: 100%;
-    outline: none;
-  }
-
-  & .sign-in-wrapper__modal-input-area::placeholder,
-  .sign-in-wrapper__modal-input-area::-ms-input-placeholder,
-  .sign-in-wrapper__modal-sign-up-link {
+  & .sign-in-wrapper__modal-sign-up-link {
     font: ${() => FONTS.regular.label};
     color: ${COLORS.TEXT_BASE};
   }
@@ -101,9 +71,5 @@ export const SignInWrapper = styled.div.attrs({ className: "sign-in-wrapper" })`
 
   & .button-wrapper {
     width: 100%;
-  }
-
-  & .sign-in-wrapper__sign-up-wrapper svg {
-    margin-top: 5px;
   }
 `;
