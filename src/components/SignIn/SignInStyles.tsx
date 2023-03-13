@@ -2,38 +2,15 @@ import styled from "styled-components";
 import COLORS from "../../themes/colors";
 import FONTS from "../../themes/fonts";
 
-export const SignInWrapper = styled.div.attrs({ className: "sign-in-wrapper" })`
-  background-color: rgba(93, 102, 112, 0.9);
-  position: fixed;
-  width: 100vw;
-  height: 100vh;
+export const SignInHeaderWrapper = styled.div.attrs({
+  className: "sign-in-header-wrapper",
+})`
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
+  width: 100%;
 
-  & .sign-in-wrapper__modal {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 16px;
-    gap: 16px;
-
-    width: 272px;
-
-    background-color: ${COLORS.WHITE};
-    box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-  }
-
-  & .sign-in-wrapper__icon-and-title-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-  }
-
-  & .sign-in-wrapper__icon-wrapper,
-  .sign-in-wrapper__modal-forgot-password {
+  & .sign-in-wrapper__icon-wrapper {
     align-self: flex-end;
   }
 
@@ -54,22 +31,36 @@ export const SignInWrapper = styled.div.attrs({ className: "sign-in-wrapper" })`
     white-space: nowrap;
     margin: 0;
   }
+`;
 
-  & .sign-in-wrapper__modal-sign-up-link {
-    font: ${() => FONTS.regular.label};
-    color: ${COLORS.TEXT_BASE};
-  }
+export const SignInForgotPasswordWrapper = styled.span.attrs({
+  className: "sign-in-forgot-password-wrapper",
+})`
+  align-self: flex-end;
+  font: ${() => FONTS.regular.small_label};
+  color: ${COLORS.SECONDARY500};
+`;
 
-  & .sign-in-wrapper__modal-sign-up-link {
-    white-space: nowrap;
-  }
-
-  & .sign-in-wrapper__modal-forgot-password {
-    font: ${() => FONTS.regular.small_label};
-    color: ${COLORS.SECONDARY500};
-  }
-
+export const SignInButtonWrapper = styled.div.attrs({
+  className: "sign-in-button-wrapper",
+})`
+  width: 100%;
+  
   & .button-wrapper {
     width: 100%;
+  }
+`;
+
+export const SignInBottomWrapper = styled.div.attrs({
+  className: "sign-in-bottom-wrapper",
+})`
+  display: flex;
+  align-items: center;
+  gap: 1ch;
+
+  & .sign-in-bottom-wrapper__modal-sign-up-link {
+    white-space: nowrap;
+    font: ${() => FONTS.regular.label};
+    color: ${COLORS.TEXT_BASE};
   }
 `;

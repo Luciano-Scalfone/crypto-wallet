@@ -12,6 +12,7 @@ const Input = ({ type, placeholder, callback, icons }: InputTypes): JSX.Element 
         placeholder={placeholder}
         className="input-wrapper__input-area"
         onChange={callback}
+        onBlur={callback}
         debounceTimeout={1500}
       />
       {icons?.right}
