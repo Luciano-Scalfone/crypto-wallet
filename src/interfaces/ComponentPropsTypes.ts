@@ -9,7 +9,7 @@ export interface HeaderCarrouselItemsTypes {
 export interface ButtonTypes {
   type: "primary" | "secondary" | 'text-only';
   content: string;
-  callback: () => any;
+  callback?: () => any;
   size?: {
     width?: string;
     height?: string;

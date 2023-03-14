@@ -27,17 +27,14 @@ const MainTop = (): JSX.Element => {
         <Button
           type="secondary"
           content="Cryptos"
-          callback={() => console.log("Cryptos")}
         />
         <Button
           type="secondary"
           content="NFTs"
-          callback={() => console.log("NFTs")}
         />
         <Button
           type="secondary"
           content="Games"
-          callback={() => console.log("Games")}
         />
       </div>
       <Waves />
