@@ -40,11 +40,11 @@ This project prototype is based at this [figma design](https://www.figma.com/fil
 
 Hello, folks.
 
-For this project I gave my best to follow the best development practives and to deliver a horizontal slice of the project fully independent. Given the time and the hands involved in this project (just my hands haha) I had to take some decisions in order to deliver what I judged would be the best way to let you know my development skills.
-That said, I tried to develop everything on my own and avoiding the usage of external libraries. I also followed the TDD process, and Typescrips instead of Javascript, what in my point of view, is what I see companies using the most for business projects. This whole context decreased my development speed, once TS is more verbose and TDD itselve reduce the development speed. Besides that, I tried to not sacrifice processes and code quality in order to deliver faster. I also tried to implement a very simple user autentication and make sure GDPR is being followed.
+For this project, I gave my best to follow the best development practices and to deliver a horizontal slice of the project fully independent. Given the time and the hands involved in this project (just my hands haha) I had to take some decisions in order to deliver what I judged would be the best way to let you know my development skills.
+That said, I tried to develop everything on my own and avoiding the usage of external libraries. I also followed the TDD process, and Typescrips instead of Javascript, which in my point of view, is what I see companies using the most for business projects. This whole context decreased my development speed, once TS is more verbose and TDD itself reduce the development speed. Besides that, I tried to not sacrifice processes and code quality in order to deliver faster. I also tried to implement a very simple user authentication and make sure GDPR is being followed.
 
 I wish I had more time to go deeper into components test with Enzyme along with jest, and also to implement a token strategy for authenticated users.
 
-Thank you to the oportunity and time you dedicated for this process. Be aware that I enjoyed a lot to work in this project.
+Thank you for the opportunity and time you dedicated to this process. Be aware that I enjoyed a lot to work on this prototype.
 
 I look foward to hearing from you.
