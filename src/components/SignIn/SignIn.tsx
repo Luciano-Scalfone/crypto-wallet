@@ -17,13 +17,18 @@ import {
 } from "./SignInStyles";
 
 const SignIn = (): JSX.Element => {
-  const { setShowSignIn } = useContext(ModalsContext);
+  const { setShowSignIn, setShowSignUp } = useContext(ModalsContext);
   const [seePassword, setSeePassword] = useState(false);
   const [user, setUser] = useState({ email: "", password: "" });
 
   const handleForgotPassword = () => {
-    return alert('A new link to change your password was sent to your email!');
-  }
+    return alert("A new link to change your password was sent to your email!");
+  };
+
+  const handleSignUpClick = () => {
+    setShowSignIn(false);
+    setShowSignUp(true);
+  };
 
   return (
     <>
@@ -70,7 +75,7 @@ const SignIn = (): JSX.Element => {
           disabled={!!(!user.email.length || !user.password.length)}
         />
       </SignInButtonWrapper>
-      <SignInBottomWrapper>
+      <SignInBottomWrapper onClick={handleSignUpClick}>
         <span className="sign-in-bottom-wrapper__modal-sign-up-link">
           Sign up to
         </span>

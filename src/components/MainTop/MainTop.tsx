@@ -6,7 +6,7 @@ import Waves from "../icons/Waves/Waves";
 import MainTopWrapper from "./MainTopStyles";
 
 const MainTop = (): JSX.Element => {
-  const { setShowSignIn } = useContext(ModalsContext);
+  const { setShowSignUp } = useContext(ModalsContext);
 
   return (
     <MainTopWrapper>
@@ -20,7 +20,7 @@ const MainTop = (): JSX.Element => {
       <Button
         type="primary"
         content="SIGN UP NOW"
-        callback={() => setShowSignIn(true)}
+        callback={() => setShowSignUp(true)}
         icon={<RightArow width={15} height={15} />}
       />
       <div className="main-top-wrapper__buttons-set">

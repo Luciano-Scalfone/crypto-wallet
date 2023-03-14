@@ -12,3 +12,7 @@ export interface ButtonWrapperType {
     height?: string;
   };
 };
+
+export interface InputWrapperType {
+  isSamePassword: boolean; 
+};

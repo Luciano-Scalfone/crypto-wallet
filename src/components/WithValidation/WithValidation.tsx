@@ -21,10 +21,10 @@ const WithValidation = <P extends object>(
 
       if (emailRegex.test(target?.value)) {
         setIsValid(true);
-        callback((prevState: any) => ({ ...prevState, email: target?.value }));
+        callback(target.value);
       } else if (!emailRegex.test(target?.value) && target?.value?.length > 0) {
         setIsValid(false);
-        callback((prevState: any) => ({ ...prevState, email: "" }));
+        callback('');
       }
     };
 
@@ -32,13 +32,10 @@ const WithValidation = <P extends object>(
       //simple password validation, password should have a length of at least 4
       if (target?.value?.length >= 4) {
         setIsValid(true);
-        callback((prevState: any) => ({
-          ...prevState,
-          password: target?.value,
-        }));
+        callback(target.value);
       } else if (target?.value?.length < 4 && target?.value?.length > 0) {
         setIsValid(false);
-        callback((prevState: any) => ({ ...prevState, password: "" }));
+        callback('');
       }
     };
 

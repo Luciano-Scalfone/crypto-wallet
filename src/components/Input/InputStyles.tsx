@@ -4,6 +4,7 @@ import FONTS from "../../themes/fonts";
 
 export const InputWrapper = styled.div.attrs({ className: "input-wrapper" })`
     display: flex;
+    align-items: center;
     gap: 8px;
     background: #ffffff;
     mix-blend-mode: normal;
@@ -11,7 +12,7 @@ export const InputWrapper = styled.div.attrs({ className: "input-wrapper" })`
     border-radius: 6px;
     width: 100%;
     height: 48px;
-    padding: 16px;
+    padding: 0 16px;
     box-sizing: border-box;
 
   & svg path {
