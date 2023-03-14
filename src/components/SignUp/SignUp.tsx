@@ -7,6 +7,7 @@ import Eye from "../icons/Eye/Eye";
 import EyeSlash from "../icons/EyeSlash/EyeSlash";
 import Lock from "../icons/Lock/Lock";
 import LogoName from "../icons/LogoName/LogoName";
+import Person from "../icons/Person/Person";
 import Input from "../Input/Input";
 import WithModal from "../Modal/Modal";
 import {
@@ -72,7 +73,7 @@ const SignUp = (): JSX.Element => {
         type="text"
         placeholder="Name"
         callback={(value: string) => setUser({ ...user, name: value })}
-        icons={{ left: <Envelope width="16px" /> }}
+        icons={{ left: <Person width="16px" /> }}
       />
       <Input
         type="email"

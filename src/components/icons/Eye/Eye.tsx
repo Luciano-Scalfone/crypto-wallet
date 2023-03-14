@@ -4,7 +4,7 @@ const Eye = ({ width, height }: SVGIconsSize) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width={width}
+      width={width || 'auto'}
       height={height}
       fill="currentColor"
       className="bi bi-eye"
