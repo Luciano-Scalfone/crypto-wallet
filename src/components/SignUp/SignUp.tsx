@@ -12,6 +12,7 @@ import WithModal from "../Modal/Modal";
 import {
   SignUpBottomWrapper,
   SignupButtonWrapper,
+  SignupCheckboxWrapper,
   SignupConfirmPasswordWrapper,
   SignUpHeaderWrapper,
 } from "./SignUpStyles";
@@ -25,6 +26,7 @@ const SignUp = (): JSX.Element => {
     email: "",
     password: "",
     confirmPassword: "",
+    acceptedTerms: false,
   });
 
   const handleSignInClick = (): void => {
@@ -33,13 +35,14 @@ const SignUp = (): JSX.Element => {
   };
 
   const isButtonDisabled = (): void => {
-    const { name, email, password, confirmPassword } = user;
+    const { name, email, password, confirmPassword, acceptedTerms } = user;
 
     const isDisabledButton = !!(
       name.length &&
       email.length &&
       password.length &&
       confirmPassword.length &&
+      acceptedTerms &&
       confirmPassword === password
     );
 
@@ -109,6 +112,20 @@ const SignUp = (): JSX.Element => {
           }}
         />
       </SignupConfirmPasswordWrapper>
+      <SignupCheckboxWrapper>
+        <input
+          type="checkbox"
+          className="sign-up-checkbox-wrapper__checkbox-input"
+          onClick={() =>
+            setUser((prevState) => ({
+              ...prevState,
+              acceptedTerms: !prevState.acceptedTerms,
+            }))
+          }
+        />
+        <div className="sign-up-checkbox-wrapper__custom-checkbox"></div>I have
+        read and accept the Privacy Policy and Terms of User Sign up.
+      </SignupCheckboxWrapper>
 
       <SignupButtonWrapper>
         <Button

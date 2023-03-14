@@ -46,6 +46,61 @@ export const SignupConfirmPasswordWrapper = styled.div.attrs({
   }
 `;
 
+export const SignupCheckboxWrapper = styled.label.attrs({
+  className: "sign-up-checkbox-wrapper",
+})`
+
+  // code extracted from https://www.w3schools.com/howto/howto_css_custom_checkbox.asp
+  
+  font: ${() => FONTS.regular.small_label};
+  color: ${COLORS.TEXT_BASE};
+  position: relative;
+  display: flex;
+  gap: 16px;
+
+  & .sign-up-checkbox-wrapper__checkbox-input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+
+  & .sign-up-checkbox-wrapper__custom-checkbox {
+    min-width: 16px;
+    height: 16px;
+    background-color: ${COLORS.WHITE};
+    border: 1px solid ${COLORS.PRIMARY500};
+    border-radius: 4px;
+  }
+
+  & input:checked ~ .sign-up-checkbox-wrapper__custom-checkbox {
+    background-color: ${COLORS.PRIMARY300};
+  }
+
+  & .sign-up-checkbox-wrapper__custom-checkbox:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+
+  & input:checked ~ .sign-up-checkbox-wrapper__custom-checkbox:after {
+    display: block;
+  }
+
+  & .sign-up-checkbox-wrapper__custom-checkbox:after {
+    left: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid ${COLORS.WHITE};
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    background-color: ${COLORS.PRIMARY300};
+  }
+`;
+
 export const SignupButtonWrapper = styled.div.attrs({
   className: "sign-up-button-wrapper",
 })`

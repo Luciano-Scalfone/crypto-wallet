@@ -28,7 +28,7 @@ describe("SignIn Component", () => {
   it("Should have four input elements component", () => {
     const inputWrapper = signUpComponent.querySelectorAll("input");
 
-    expect(inputWrapper).toHaveLength(4);
+    expect(inputWrapper).toHaveLength(5);
   });
 
   it("Should have a primary button component", () => {
