@@ -1,11 +1,14 @@
-import './App.css';
-import ModalsProvider from './contexts/ModalsContext';
-import Router from './Router';
+import "./App.css";
+import ModalsProvider from "./contexts/ModalsContext";
+import UserProvider from "./contexts/UserContext";
+import Router from "./Router";
 
 function App() {
   return (
     <ModalsProvider>
-      <Router />
+      <UserProvider>
+        <Router />
+      </UserProvider>
     </ModalsProvider>
   );
 }

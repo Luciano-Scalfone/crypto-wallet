@@ -1,14 +1,18 @@
 import { render } from "@testing-library/react";
 import ModalsProvider from "../../contexts/ModalsContext";
+import UserProvider from "../../contexts/UserContext";
+import renderWithRouter from "../../helpers/renderWithRouter";
 import SignIn from "./SignIn";
 
 describe("SignIn Component", () => {
   let signInComponent: HTMLElement;
 
   beforeEach(() => {
-    signInComponent = render(
+    signInComponent = renderWithRouter(
       <ModalsProvider>
-        <SignIn />
+        <UserProvider>
+          <SignIn />
+        </UserProvider>
       </ModalsProvider>
     ).container;
   });

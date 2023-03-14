@@ -17,6 +17,8 @@ import {
   SignupConfirmPasswordWrapper,
   SignUpHeaderWrapper,
 } from "./SignUpStyles";
+import bcrypt from "bcryptjs";
+import { addNewUser } from "../../service/fetchData";
 
 const SignUp = (): JSX.Element => {
   const { setShowSignUp, setShowSignIn } = useContext(ModalsContext);
@@ -30,7 +32,19 @@ const SignUp = (): JSX.Element => {
     acceptedTerms: false,
   });
 
-  const handleSignInClick = (): void => {
+  const handleSignInClick = async () => {
+    setShowSignIn(true);
+    setShowSignUp(false);
+  };
+
+  const handleSignUpClick = async () => {
+    const { name, email, password } = user;
+    const newUser = { name, email, password };
+
+    newUser.password = bcrypt.hashSync(password, 10);
+
+    await addNewUser(newUser);
+
     setShowSignIn(true);
     setShowSignUp(false);
   };
@@ -132,7 +146,7 @@ const SignUp = (): JSX.Element => {
         <Button
           type="primary"
           content="Sign Up"
-          callback={() => console.log("signed in")}
+          callback={handleSignUpClick}
           size={{ width: "100%", height: "48px" }}
           disabled={isDisabled}
         />

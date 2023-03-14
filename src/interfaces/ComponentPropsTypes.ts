@@ -35,3 +35,8 @@ export interface InputTypes {
     right?: JSX.Element;
   },
 }
+
+export interface UserTypes {
+  email: string;
+  password: string;
+}

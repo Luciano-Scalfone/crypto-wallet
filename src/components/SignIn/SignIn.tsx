@@ -1,5 +1,6 @@
 import { useContext, useState } from "react";
 import { ModalsContext } from "../../contexts/ModalsContext";
+import { loginUser } from "../../service/fetchData";
 import Button from "../Button/Button";
 import CrossIcon from "../icons/CrossIcon/CrossIcon";
 import Envelope from "../icons/Envelope/Envelope";
@@ -15,11 +16,15 @@ import {
   SignInForgotPasswordWrapper,
   SignInHeaderWrapper,
 } from "./SignInStyles";
+import { UserContext } from "../../contexts/UserContext";
+import { useNavigate } from "react-router-dom";
 
 const SignIn = (): JSX.Element => {
   const { setShowSignIn, setShowSignUp } = useContext(ModalsContext);
+  const { setIsLogged } = useContext(UserContext);
   const [seePassword, setSeePassword] = useState(false);
   const [user, setUser] = useState({ email: "", password: "" });
+  const navigate = useNavigate();
 
   const handleForgotPassword = () => {
     return alert("A new link to change your password was sent to your email!");
@@ -28,6 +33,19 @@ const SignIn = (): JSX.Element => {
   const handleSignUpClick = () => {
     setShowSignIn(false);
     setShowSignUp(true);
+  };
+
+  const handleSigninClick = async () => {
+    const loggedUser = await loginUser(user);
+
+    if (loggedUser) {
+      setIsLogged(true);
+      setShowSignIn(false);
+      navigate('/dashboard');
+      return;
+    }
+
+    setShowSignIn(false);
   };
 
   return (
@@ -47,13 +65,13 @@ const SignIn = (): JSX.Element => {
       <Input
         type="email"
         placeholder="Email"
-        callback={setUser}
+        callback={(value: string) => setUser({ ...user, email: value })}
         icons={{ left: <Envelope width="16px" /> }}
       />
       <Input
         type={seePassword ? "text" : "password"}
         placeholder="Password"
-        callback={setUser}
+        callback={(value: string) => setUser({ ...user, password: value })}
         icons={{
           left: <Lock width="16px" />,
           right: (
@@ -70,7 +88,7 @@ const SignIn = (): JSX.Element => {
         <Button
           type="primary"
           content="Sign in"
-          callback={() => console.log("signed in")}
+          callback={handleSigninClick}
           size={{ width: "100%", height: "48px" }}
           disabled={!!(!user.email.length || !user.password.length)}
         />
