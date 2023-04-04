@@ -5,7 +5,7 @@ export interface HeaderCarrouselItemsTypes {
 }
 
 export interface ButtonTypes {
-  type: "primary" | "secondary" | 'text-only';
+  type: "primary" | "secondary" | "text-only";
   content: string;
   callback?: () => void;
   size?: {
@@ -21,7 +21,6 @@ export interface CardItemTypes {
   label: string;
   title: string;
   content: string;
-  index: number;
 }
 
 export interface InputTypes<T> {
@@ -31,10 +30,25 @@ export interface InputTypes<T> {
   icons?: {
     left?: JSX.Element;
     right?: JSX.Element;
-  },
+  };
 }
 
 export interface UserTypes {
   email: string;
   password: string;
 }
+
+export type HTMLInputType = { target: HTMLInputElement };
+
+export type CryptoType = {
+  ask: string;
+  bid: string;
+  code: string;
+  exchange: { BRL: string; USD: string };
+  name: string;
+  var_bid: string;
+};
+
+export type CryptosPropType<T extends CryptoType> = {
+  cryptos: T[];
+};

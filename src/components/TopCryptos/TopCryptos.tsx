@@ -3,11 +3,12 @@ import { useFetch } from "../../service/fetchData";
 import Button from "../Button/Button";
 import TableArow from "../icons/TableArow/RightArow";
 import { FakeTableBodyCellWrapper, TopCryptosWrapper } from "./TopCryptosStyle";
+import { CryptoType } from "../../interfaces/ComponentPropsTypes";
 
 const FAKE_TABLE_HEADER = ["crypto", "actions"];
 
 const TopCryptos = (): JSX.Element => {
-  const [data] = useFetch("/cryptos");
+  const data = useFetch("/cryptos");
   const [mappedData, setMappedData] = useState<any[]>([]);
   const [showMore, setShowMore] = useState(true);
 
@@ -66,10 +67,10 @@ const TopCryptos = (): JSX.Element => {
                   <span className="top-cryptos-wrapper__header-element">
                     {element}
                   </span>
-                  {mappedData?.map((crypto) => {
+                  {mappedData?.map((crypto, index) => {
                     if (element === "actions") {
                       return (
-                        <FakeTableBodyCellWrapper>
+                        <FakeTableBodyCellWrapper key={`${crypto}-${index}`}>
                           <div onClick={handleFakeTableArowClick}>
                             <TableArow width="16px" height="9px" />
                           </div>
@@ -78,7 +79,7 @@ const TopCryptos = (): JSX.Element => {
                     }
 
                     return (
-                      <FakeTableBodyCellWrapper>
+                      <FakeTableBodyCellWrapper key={`${crypto}-${index}`}>
                         <img
                           src={require(`../../assets/${crypto.name}.png`)}
                           width="24px"

@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import React, { useContext, useState } from "react";
 import { ModalsContext } from "../../contexts/ModalsContext";
 import { loginUser } from "../../service/fetchData";
 import Button from "../Button/Button";
@@ -19,7 +19,7 @@ import {
 import { UserContext } from "../../contexts/UserContext";
 import { useNavigate } from "react-router-dom";
 
-const SignIn = (): JSX.Element => {
+const SignIn: React.FC = () => {
   const { setShowSignIn, setShowSignUp } = useContext(ModalsContext);
   const { setIsLogged } = useContext(UserContext);
   const [seePassword, setSeePassword] = useState(false);

@@ -1,13 +1,13 @@
 import { CardItemTypes } from "../../interfaces/ComponentPropsTypes";
 import CardItemWrapper from "./CardItemStyles";
 
-const CardItem = ({
+const CardItem = <T extends CardItemTypes & { index: number }>({
   icon,
   label,
   title,
   content,
   index,
-}: CardItemTypes): JSX.Element => {
+}: T) => {
   return (
     <CardItemWrapper key={index}>
       <div>{icon}</div>

@@ -9,7 +9,7 @@ const Input: React.FC<InputTypes<string>> = ({
   callback,
   icons,
 }) => {
-  const handleEvents = ({ target }: { target: HTMLInputElement }) => {
+  const handleInputEvents = ({ target }: { target: HTMLInputElement }) => {
     callback(target.value);
   };
 
@@ -20,8 +20,8 @@ const Input: React.FC<InputTypes<string>> = ({
         type={type}
         placeholder={placeholder}
         className="input-wrapper__input-area"
-        onChange={handleEvents}
-        onBlur={handleEvents}
+        onChange={handleInputEvents}
+        onBlur={handleInputEvents}
         debounceTimeout={1500}
       />
       {icons?.right}

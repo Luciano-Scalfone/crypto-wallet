@@ -7,7 +7,7 @@ import HamburgerMenu from "../icons/HamburgerMenu/HamburgerMenu";
 import { HeaderWrapper } from "./HeaderStyles";
 
 const Header = (): JSX.Element => {
-  const [data] = useFetch("/latest");
+  const data = useFetch("/latest");
   const { showTrayMenu, setShowTrayMenu } = useContext(ModalsContext);
 
   return (

@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { CardItemTypes } from "../../interfaces/ComponentPropsTypes";
 import CardItem from "../CardItem/CardItem";
 import Bitcoin from "../icons/Bitcoin/Bitcoin";
 import Business from "../icons/Business/Business";
@@ -6,30 +6,30 @@ import Machine from "../icons/Machine/Machine";
 import Union from "../icons/Union/Union";
 import MainMiddleWrapper from "./MainMiddleStyles";
 
-const CARDS_CONTENT = [
+const CARDS_CONTENT: CardItemTypes[] = [
   {
-    iconElement: <Bitcoin width="31.87px" height="31.88px" />,
+    icon: <Bitcoin width="31.87px" height="31.88px" />,
     label: "For your company",
     title: "Crypto Solutions",
     content:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam,",
   },
   {
-    iconElement: <Union width="31.87px" height="31.88px" />,
+    icon: <Union width="31.87px" height="31.88px" />,
     label: "For your company",
     title: "Crypto Solutions",
     content:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam,",
   },
   {
-    iconElement: <Business width="31.87px" height="31.88px" />,
+    icon: <Business width="31.87px" height="31.88px" />,
     label: "For your company",
     title: "Crypto Solutions",
     content:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam,",
   },
   {
-    iconElement: <Machine width="31.87px" height="31.88px" />,
+    icon: <Machine width="31.87px" height="31.88px" />,
     label: "For your company",
     title: "Crypto Solutions",
     content:
@@ -37,7 +37,7 @@ const CARDS_CONTENT = [
   },
 ];
 
-const MainMiddle = (): JSX.Element => {
+const MainMiddle: React.FC = () => {
   return (
     <MainMiddleWrapper>
       <span className="main-middle-wrapper__span">Lorem ipsum</span>
@@ -51,7 +51,7 @@ const MainMiddle = (): JSX.Element => {
           {CARDS_CONTENT.map((content, index) => {
             return (
               <CardItem
-                icon={content.iconElement}
+                icon={content.icon}
                 label={content.label}
                 title={content.title}
                 content={content.content}

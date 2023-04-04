@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { InputTypes, UserTypes } from "../../interfaces/ComponentPropsTypes";
+import { HTMLInputType, InputTypes } from "../../interfaces/ComponentPropsTypes";
 import { WithValidationWrapper } from "./WithValidationStyles";
 
 const WithValidation = <P extends object>(
@@ -10,13 +10,13 @@ const WithValidation = <P extends object>(
     const [isDirty, setIsDirty] = useState(false);
     const { type, callback } = props;
 
-    const handleBlur = ({ target }: any) => {
+    const handleBlur = ({ target }: HTMLInputType) => {
       type === "email" ? emailValidation(target) : updateCredentials(target);
 
       setIsDirty(true);
     };
 
-    const emailValidation = (target: any) => {
+    const emailValidation = (target: HTMLInputElement) => {
       const emailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g;
 
       if (emailRegex.test(target?.value)) {
@@ -28,7 +28,7 @@ const WithValidation = <P extends object>(
       }
     };
 
-    const updateCredentials = (target: any) => {
+    const updateCredentials = (target: HTMLInputElement) => {
       //simple password validation, password should have a length of at least 4
       if (target?.value?.length >= 4) {
         setIsValid(true);
