@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import { InputTypes } from "../../interfaces/ComponentPropsTypes";
+import { InputTypes, UserTypes } from "../../interfaces/ComponentPropsTypes";
 import { WithValidationWrapper } from "./WithValidationStyles";
 
 const WithValidation = <P extends object>(
   WrappedComponent: React.ComponentType<P>
-): React.FC<P & InputTypes> => {
-  const WithValidationInput = ({ ...props }: InputTypes): JSX.Element => {
+): React.FC<InputTypes<string>> => {
+  const WithValidationInput = ({ ...props }): JSX.Element => {
     const [isValid, setIsValid] = useState(false);
     const [isDirty, setIsDirty] = useState(false);
     const { type, callback } = props;
