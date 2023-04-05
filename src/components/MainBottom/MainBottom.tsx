@@ -4,7 +4,7 @@ import MainBottomWrapper from "./MainBottomStyles";
 import { DebounceInput } from "react-debounce-input";
 import { addNewSubscription } from "../../service/fetchData";
 
-const MainBottom = (): JSX.Element => {
+const MainBottom: React.FC = () => {
   const [email, setEmail] = useState("");
   const [isDisabled, setIsDisabled] = useState(false);
 

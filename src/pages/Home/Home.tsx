@@ -7,7 +7,7 @@ import SignUp from "../../components/SignUp/SignUp";
 import { ModalsContext } from "../../contexts/ModalsContext";
 import { HomeWrapper } from "./HomeStyles";
 
-const Home = () => {
+const Home: React.FC = () => {
   const { showSignIn, showSignUp } = useContext(ModalsContext);
 
   return (

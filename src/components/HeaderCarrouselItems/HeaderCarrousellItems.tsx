@@ -2,11 +2,11 @@ import React from "react";
 import { HeaderCarrouselItemsTypes } from "../../interfaces/ComponentPropsTypes";
 import { HeaderCarrouselItemsWrapper } from "./HeaderCarrousellItemsStyles";
 
-const HeaderCarrouselItems = ({
+const HeaderCarrouselItems: React.FC<HeaderCarrouselItemsTypes> = ({
   code,
   varBid,
   exchange,
-}: HeaderCarrouselItemsTypes): JSX.Element => {
+}) => {
   return (
     <HeaderCarrouselItemsWrapper key={code} varBid={varBid}>
       <span className="header-carrousel-items-wrapper__code">{code}</span>

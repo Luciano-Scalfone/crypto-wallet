@@ -1,8 +1,23 @@
-import { createContext, useState } from "react";
+import {
+  createContext,
+  Dispatch,
+  SetStateAction,
+  useState,
+  PropsWithChildren,
+} from "react";
 
-export const ModalsContext = createContext<any | undefined>(undefined);
+type ModalsContextValueType = {
+  showSignIn: boolean;
+  setShowSignIn: Dispatch<SetStateAction<boolean>>;
+  showSignUp: boolean;
+  setShowSignUp: Dispatch<SetStateAction<boolean>>;
+  showTrayMenu: boolean;
+  setShowTrayMenu: Dispatch<SetStateAction<boolean>>;
+};
 
-const ModalsProvider = ({ children }: any): JSX.Element => {
+export const ModalsContext = createContext<ModalsContextValueType>({} as ModalsContextValueType);
+
+const ModalsProvider: React.FC<PropsWithChildren> = ({ children }) => {
   const [showSignIn, setShowSignIn] = useState<boolean>(false);
   const [showSignUp, setShowSignUp] = useState<boolean>(false);
   const [showTrayMenu, setShowTrayMenu] = useState<boolean>(false);

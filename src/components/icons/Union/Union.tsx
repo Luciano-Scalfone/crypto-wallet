@@ -1,7 +1,7 @@
 import React from "react";
 import { SVGIconsSize } from "../../../interfaces/IconsTypes";
 
-const Union = ({ width, height }: SVGIconsSize): JSX.Element => {
+const Union: React.FC<SVGIconsSize> = ({ width, height }) => {
   return (
     <svg
       width={width}

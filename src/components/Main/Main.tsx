@@ -7,7 +7,7 @@ import TopCryptos from "../TopCryptos/TopCryptos";
 import TrayMenu from "../TrayMenu/TrayMenu";
 import MainWrapper from "./MainStyles";
 
-const Main = (): JSX.Element => {
+const Main: React.FC = () => {
   const { showTrayMenu } = useContext(ModalsContext);
 
   return (

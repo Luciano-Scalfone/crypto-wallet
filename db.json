@@ -1,6 +1,7 @@
 {
   "latest": [
     {
+      "id": "01",
       "code": "BTC",
       "name": "Bitcoin",
       "ask": "1500",
@@ -12,17 +13,7 @@
       }
     },
     {
-      "code": "DOG",
-      "name": "Dogecoin",
-      "ask": "2000",
-      "bid": "7230",
-      "var_bid": "-5230",
-      "exchange": {
-        "BRL": "23,62",
-        "USD": "14.499,52"
-      }
-    },
-    {
+      "id": "02",
       "code": "ETH",
       "name": "Ethereum",
       "ask": "2000",
@@ -34,6 +25,19 @@
       }
     },
     {
+      "id": "03",
+      "code": "ADA",
+      "name": "Cardano",
+      "ask": "1500",
+      "bid": "8582",
+      "var_bid": "+7082",
+      "exchange": {
+        "BRL": "23,62",
+        "USD": "24.499,52"
+      }
+    },
+    {
+      "id": "04",
       "code": "SOL",
       "name": "Solana",
       "ask": "1500",
@@ -45,8 +49,69 @@
       }
     },
     {
-      "code": "SAND",
-      "name": "SandBox",
+      "id": "05",
+      "code": "USDC",
+      "name": "USD Coin",
+      "ask": "1500",
+      "bid": "8582",
+      "var_bid": "-7082",
+      "exchange": {
+        "BRL": "23,62",
+        "USD": "24.499,52"
+      }
+    },
+    {
+      "id": "06",
+      "code": "BTC",
+      "name": "Bitcoin",
+      "ask": "1500",
+      "bid": "8582",
+      "var_bid": "+7082",
+      "exchange": {
+        "BRL": "23,62",
+        "USD": "24.499,52"
+      }
+    },
+    {
+      "id": "07",
+      "code": "ETH",
+      "name": "Ethereum",
+      "ask": "2000",
+      "bid": "4500",
+      "var_bid": "+2500",
+      "exchange": {
+        "BRL": "23,62",
+        "USD": "20.199,52"
+      }
+    },
+    {
+      "id": "08",
+      "code": "ADA",
+      "name": "Cardano",
+      "ask": "1500",
+      "bid": "8582",
+      "var_bid": "+7082",
+      "exchange": {
+        "BRL": "23,62",
+        "USD": "24.499,52"
+      }
+    },
+    {
+      "id": "09",
+      "code": "SOL",
+      "name": "Solana",
+      "ask": "1500",
+      "bid": "8582",
+      "var_bid": "+7082",
+      "exchange": {
+        "BRL": "23,62",
+        "USD": "24.499,52"
+      }
+    },
+    {
+      "id": "10",
+      "code": "USDC",
+      "name": "USD Coin",
       "ask": "1500",
       "bid": "8582",
       "var_bid": "-7082",

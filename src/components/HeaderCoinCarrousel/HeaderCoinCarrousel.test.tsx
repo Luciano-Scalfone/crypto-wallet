@@ -4,6 +4,7 @@ import HeaderCoinCarrousel from "./HeaderCoinCarrousel";
 
 const MOCK_CRYPTOS = [
   {
+    id: "01",
     code: "BTC",
     name: "Bitcoin",
     ask: "1500",
@@ -15,6 +16,7 @@ const MOCK_CRYPTOS = [
     },
   },
   {
+    id: "01",
     code: "DOG",
     name: "Dogecoin",
     ask: "2000",
@@ -23,17 +25,6 @@ const MOCK_CRYPTOS = [
     exchange: {
       BRL: "23,62",
       USD: "14.499,52",
-    },
-  },
-  {
-    code: "ETH",
-    name: "Ethereum",
-    ask: "2000",
-    bid: "4500",
-    var_bid: "+2500",
-    exchange: {
-      BRL: "23,62",
-      USD: "20.199,52",
     },
   },
 ];

@@ -3,7 +3,7 @@ import { ModalsContext } from "../../contexts/ModalsContext";
 import Button from "../Button/Button";
 import { TrayMenuWrapper } from "./TrayMenuStyle";
 
-const TrayMenu = (): JSX.Element => {
+const TrayMenu: React.FC = () => {
   const { setShowSignIn, setShowSignUp, setShowTrayMenu } =
     useContext(ModalsContext);
 

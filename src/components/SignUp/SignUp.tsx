@@ -20,7 +20,7 @@ import {
 import bcrypt from "bcryptjs";
 import { addNewUser } from "../../service/fetchData";
 
-const SignUp = (): JSX.Element => {
+const SignUp: React.FC = () => {
   const { setShowSignUp, setShowSignIn } = useContext(ModalsContext);
   const [seePassword, setSeePassword] = useState(false);
   const [isDisabled, setIsDisabled] = useState(true);

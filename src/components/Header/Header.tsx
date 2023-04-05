@@ -6,7 +6,7 @@ import CoinSynch from "../icons/CoinSynch/CoinSynch";
 import HamburgerMenu from "../icons/HamburgerMenu/HamburgerMenu";
 import { HeaderWrapper } from "./HeaderStyles";
 
-const Header = (): JSX.Element => {
+const Header: React.FC = () => {
   const data = useFetch("/latest");
   const { showTrayMenu, setShowTrayMenu } = useContext(ModalsContext);
 

@@ -1,6 +1,6 @@
 import { SVGIconsSize } from "../../../interfaces/IconsTypes";
 
-const CrossIcon = ({width, height}: SVGIconsSize) => {
+const CrossIcon: React.FC<SVGIconsSize> = ({width, height}) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"

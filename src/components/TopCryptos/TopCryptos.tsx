@@ -3,26 +3,26 @@ import { useFetch } from "../../service/fetchData";
 import Button from "../Button/Button";
 import TableArow from "../icons/TableArow/RightArow";
 import { FakeTableBodyCellWrapper, TopCryptosWrapper } from "./TopCryptosStyle";
-import { CryptoType } from "../../interfaces/ComponentPropsTypes";
+import { MappedCryptosType } from "../../interfaces/ComponentPropsTypes";
 
 const FAKE_TABLE_HEADER = ["crypto", "actions"];
 
-const TopCryptos = (): JSX.Element => {
+const TopCryptos: React.FC = () => {
   const data = useFetch("/cryptos");
-  const [mappedData, setMappedData] = useState<any[]>([]);
+  const [mappedData, setMappedData] = useState<MappedCryptosType[]>([]);
   const [showMore, setShowMore] = useState(true);
 
-  const handleFakeTableArowClick = (event: any) => {
-    const targetClasses = event?.currentTarget?.classList;
+  const handleFakeTableArowClick = (event: React.MouseEvent) => {
+    const targetClasses = (event.currentTarget as HTMLElement).classList;
     const svgClass = "top-cryptos-wrapper__body-svg-element";
 
     classHandlerHelper(targetClasses, svgClass);
   };
 
   const handleViewMoreButtonClick = () => {
-    const viewMoreWrapper: any = document.querySelector(
+    const viewMoreWrapper: DOMTokenList = document.querySelector(
       ".top-cryptos-wrapper__view-more-wrapper"
-    )?.classList;
+    )!.classList;
     const className = "top-cryptos-wrapper__view-more-wrapper__view-toggle";
 
     classHandlerHelper(viewMoreWrapper, className);
@@ -38,7 +38,7 @@ const TopCryptos = (): JSX.Element => {
 
   useEffect(() => {
     const fakeTableConfig = data.map(
-      ({ id, name, code, exchange, var_bid }: any) => {
+      ({ id, name, code, exchange, var_bid }) => {
         return {
           id,
           name,
@@ -84,7 +84,7 @@ const TopCryptos = (): JSX.Element => {
                           src={require(`../../assets/${crypto.name}.png`)}
                           width="24px"
                         />
-                        {crypto[element]}
+                        {crypto.crypto}
                       </FakeTableBodyCellWrapper>
                     );
                   })}

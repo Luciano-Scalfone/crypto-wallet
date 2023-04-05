@@ -5,7 +5,7 @@ import RightArow from "../icons/RightArow/RightArow";
 import Waves from "../icons/Waves/Waves";
 import MainTopWrapper from "./MainTopStyles";
 
-const MainTop = (): JSX.Element => {
+const MainTop: React.FC = () => {
   const { setShowSignUp } = useContext(ModalsContext);
 
   return (

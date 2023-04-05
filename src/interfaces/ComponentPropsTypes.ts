@@ -24,7 +24,7 @@ export interface CardItemTypes {
 }
 
 export interface InputTypes<T> {
-  type: string;
+  type: "text" | "password" | "email";
   placeholder: string;
   callback: (value: T) => void;
   icons?: {
@@ -41,6 +41,7 @@ export interface UserTypes {
 export type HTMLInputType = { target: HTMLInputElement };
 
 export type CryptoType = {
+  id: string;
   ask: string;
   bid: string;
   code: string;
@@ -51,4 +52,12 @@ export type CryptoType = {
 
 export type CryptosPropType<T extends CryptoType> = {
   cryptos: T[];
+};
+
+export type MappedCryptosType = {
+  id: string;
+  name: string;
+  crypto: string;
+  price: string;
+  change: string;
 };

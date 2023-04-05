@@ -1,7 +1,7 @@
 import React from "react";
 import { SVGIconsSize } from "../../../interfaces/IconsTypes";
 
-const CoinSynch = ({width, height}: SVGIconsSize): JSX.Element => {
+const CoinSynch: React.FC<SVGIconsSize> = ({width, height}) => {
   return (
     <svg
       id="coin-synch-logo"

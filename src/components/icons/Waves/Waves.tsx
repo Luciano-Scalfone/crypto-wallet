@@ -1,6 +1,6 @@
 import { WavesWrapper } from "./WavesStyles";
 
-const Waves = () => {
+const Waves: React.FC = () => {
   return (
     <WavesWrapper>
       <svg

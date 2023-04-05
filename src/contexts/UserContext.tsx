@@ -1,8 +1,13 @@
-import { createContext, useState } from "react";
+import { PropsWithChildren, createContext, useState } from "react";
 
-export const UserContext = createContext<any | undefined>(undefined);
+type ContextType = {
+  isLogged: boolean;
+  setIsLogged: React.Dispatch<React.SetStateAction<boolean>>;
+};
 
-const UserProvider = ({ children }: any): JSX.Element => {
+export const UserContext = createContext<ContextType>({} as ContextType);
+
+const UserProvider: React.FC<PropsWithChildren> = ({ children }) => {
   const [isLogged, setIsLogged] = useState<boolean>(false);
 
   return (

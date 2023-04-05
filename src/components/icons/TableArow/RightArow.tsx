@@ -1,6 +1,6 @@
 import { SVGIconsSize } from "../../../interfaces/IconsTypes";
 
-const TableArow = ({ width, height }: SVGIconsSize): JSX.Element => {
+const TableArow: React.FC<SVGIconsSize> = ({ width, height }) => {
   return (
     <svg
       width={width}

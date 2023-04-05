@@ -1,6 +1,6 @@
 import { SVGIconsSize } from "../../../interfaces/IconsTypes";
 
-const Eye = ({ width, height }: SVGIconsSize) => {
+const Eye: React.FC<SVGIconsSize> = ({ width, height }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"

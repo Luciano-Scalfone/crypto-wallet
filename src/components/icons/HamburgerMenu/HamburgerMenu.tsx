@@ -1,7 +1,7 @@
 import React from "react";
 import { SVGIconsSize } from "../../../interfaces/IconsTypes";
 
-const HamburgerMenu = ({ width, height }: SVGIconsSize): JSX.Element => {
+const HamburgerMenu: React.FC<SVGIconsSize> = ({ width, height }) => {
   return (
     <svg
       id="hamburger-menu"

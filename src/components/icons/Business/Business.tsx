@@ -1,7 +1,7 @@
 import React from "react";
 import { SVGIconsSize } from "../../../interfaces/IconsTypes";
 
-const Business = ({ width, height }: SVGIconsSize): JSX.Element => {
+const Business: React.FC<SVGIconsSize> = ({ width, height }) => {
   return (
     <svg
       width={width}

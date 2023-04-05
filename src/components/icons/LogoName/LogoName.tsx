@@ -1,6 +1,6 @@
 import { SVGIconsSize } from "../../../interfaces/IconsTypes";
 
-const LogoName = ({ width, height }: SVGIconsSize) => {
+const LogoName: React.FC<SVGIconsSize> = ({ width, height }) => {
   return (
     <svg
       width={width}
